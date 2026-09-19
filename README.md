@@ -1,23 +1,28 @@
-# Obsidian PM System
+# obsidian-pm-system
 
-Personal knowledge management system built for project management workflows.
+Личная система управления проектами и знаниями на Obsidian и Claude Code. Я строю её больше года под свою работу менеджера проектов, чтобы информация не терялась, а решения не жили в чьей-то голове.
 
-## What is this
+## Как устроено
 
-A structured Obsidian vault I use daily as a project manager — combining note-taking, task tracking, and AI assistance in one place.
+- **Жизненный цикл материала.** Входящее попадает в инбокс, дальше в проекты, области, ресурсы или архив. У каждого шага свои правила.
+- **Слой wiki.** Агент сам пишет синтезированные страницы по темам, ведёт индекс и хронологический лог изменений.
+- **CLAUDE.md.** Свод правил для агента: как обрабатывать новый материал, как сверять его со старым, как называть файлы, в каком стиле общаться.
+- **Память между сессиями.** Один факт, один файл, с типом (профиль, обратная связь, проект, ссылка) и общим индексом. Плюс файл с хвостами прошлой сессии и список отложенных дел.
+- **Скиллы и хуки.** Переиспользуемые промпт-пайплайны (редактура текста, планирование через интервью, разбор видео) и хуки на события Claude Code.
+- **Дашборд.** Dataview-таблицы: проекты, дедлайны, статусы.
+- **Telegram-бот.** Канал ввода: сообщение в бота превращается в заметку в нужной папке хранилища.
 
-## Core setup
+## Что это решает
 
-- **Templater** — automated templates for meeting notes, task descriptions, project cards
-- **Dataview** — dynamic tables to track tasks, deadlines, project statuses across notes
-- **LLM integration** — connected local AI assistant for drafting protocols, summarizing meetings, building checklists
+- Протокол совещания из сырых заметок собирается за пару минут.
+- Бэклог и дедлайны по всем проектам видны в одном месте.
+- Любое решение и договорённость можно найти поиском: агент отвечает на вопросы по базе со ссылками на документы-источники.
+- Агент в начале сессии сам поднимает незакрытые вопросы и сверяет новые данные со старыми.
 
-## What it solves
+## Стек
 
-- Meeting minutes: from raw notes to formatted protocol in under 2 minutes
-- Project backlog: all tasks visible in one Dataview dashboard
-- Knowledge base: every decision and agreement is searchable and linked
+Obsidian · Dataview · Claude Code · Telegram Bot API
 
-## Stack
+## Важно
 
-Obsidian · Templater · Dataview · LLM (local) · Telegram bot for team notifications
+Систему строил для себя и для личной работы, не для команды. Репозиторий описывает подход; личные данные хранилища сюда не попадают.
